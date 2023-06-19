@@ -20,19 +20,32 @@ const Home = () => {
     getMovies();
   }, []);
 
-  return (
-    <div>
-      <h1>Top Ten Movies da semana !!</h1>
-      {movies.length === 0 
-        ? (<p>Carregando ...</p>) 
-        : ( 
-          movies.map((movie) => (
-            <div className="movie" key={movie.id}>
-              <h3>{movie.title}</h3>
-            </div>
-          ))
-        )
-      }
+  return (    
+    <div className="slider-container">
+      <h1 className="title">Top Ten Movies</h1>
+      <div className="card-slider">
+        {movies.length === 0 
+          ? (<p>Carregando ...</p>) 
+          : ( 
+              movies.map((movie) => (              
+                <div className="card-container" key={movie.id}>
+                  <div className="image-container">
+                    <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                  </div>
+                  <div className="card-title">
+                    <h2>{movie.title} ({movie.vote_average}/10)</h2>
+                  </div>
+                  <div className="card-description">
+                    <p>{movie.overview}</p>
+                  </div>
+                  <div >
+                    <p className="avaliacoes">Avaliações: {movie.popularity}</p>
+                  </div>
+                </div>
+              ))
+            )
+        }
+      </div>
     </div>
   );
 };

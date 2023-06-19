@@ -1,0 +1,56 @@
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .card-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* Adiciona um scroll horizontal */
+    scrollbar-width: thin; /* Define a largura da barra de rolagem */
+    /* Permitir rolagem horizontel com o scroll do mouse */
+    scroll-behavior: smooth;
+  }
+  
+  .card-container {
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card-container:last-child {
+    margin-right: 0;
+  }
+  
+  .image-container img {
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .avaliacoes {
+    display: flex;
+    justify-content: start;
+    margin-top: 1rem;
+  }
+  
+  .card-title {
+    margin: 0.5rem 0 0.5rem 0.3rem;
+  }
+  
+  .card-description {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    overflow: hidden;
+    width: 290px;
+    text-align: justify;
+    margin: 0.5rem 0 0.5rem 0.3rem;
+  }
+  
