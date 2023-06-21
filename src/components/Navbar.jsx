@@ -10,7 +10,10 @@ const Navbar = () => {
         </h2>
         <ul>
             <li>
-                <Link to={'/'}>Início</Link>
+                <Link to={'/'}>Now Playing</Link>
+            </li>
+            <li>
+                <Link to={'/popular'}>Popular</Link>
             </li>
             <li>
                 <Link to={'/about'} className="new-btn">Sobre</Link>

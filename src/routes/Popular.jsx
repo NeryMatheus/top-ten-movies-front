@@ -3,12 +3,12 @@ import { useState, useEffect } from "react"
 
 import './Home.css'
 
-const Home = () => {
+const Popular = () => {
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/movies/now-playing/1');
+      const response = await axios.get('http://localhost:3000/movies/popular/1');
       const data = response.data;      
       setMovies(data);
     } catch (error) {
@@ -22,7 +22,7 @@ const Home = () => {
 
   return (    
     <div className="slider-container">
-      <h1 className="title">Now Playing</h1>
+      <h1 className="title">Popular</h1>
       <div className="card-slider">
         {movies.length === 0 
           ? (<p>Carregando ...</p>) 
@@ -50,4 +50,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Popular
