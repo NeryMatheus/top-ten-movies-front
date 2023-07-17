@@ -39,7 +39,7 @@ const Home = () => {
                     <p>{movie.overview}</p>
                   </div>
                   <div >
-                    <p className="avaliacoes">Avaliações: {movie.popularity}</p>
+                    <p className="avaliacoes">Avaliações: {movie.popularity.toLocaleString('pt-BR')}</p>
                   </div>
                 </div>
               ))

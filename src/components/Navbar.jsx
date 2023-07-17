@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Link to={'/popular'}>Popular</Link>
             </li>
             <li>
-                <Link to={'/about'} className="new-btn">Sobre</Link>
+                {/* <Link to={'/about'} className="new-btn">Sobre</Link> */}
             </li>
         </ul>
     </nav>
