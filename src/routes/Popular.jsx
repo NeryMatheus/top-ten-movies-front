@@ -8,7 +8,7 @@ const Popular = () => {
 
   const getMovies = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/movies/popular/1');
+      const response = await axios.get('https://top-ten-movies-agifgkwnj-nerymatheus.vercel.app/movies/popular/1');
       const data = response.data;      
       setMovies(data);
     } catch (error) {
