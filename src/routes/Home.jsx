@@ -8,7 +8,7 @@ const Home = () => {
 
   const getMovies = async () => {
     try {
-      const response = await axios.get('https://top-ten-movies-agifgkwnj-nerymatheus.vercel.app/movies/now-playing/1');
+      const response = await axios.get('https://ttm-backend-ox39ks3h7-nerymatheus.vercel.app/movies/now-playing/1');
       const data = response.data;      
       setMovies(data);
     } catch (error) {
